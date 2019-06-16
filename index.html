@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Data Journalism with D3</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js">
+	</script>
+</head>
+<body>
+
+<h1 class="heading"> Data Journalism: 2014 Economic factors by State </h1>
+<div>
+<iframe src="d3.html" height="500" width="100%" frameborder="0" scrolling="no">
+</iframe>
+</div>
+<!-- <h3>Observations: </h3>
+<p>Default x-axis field is % of population having education level less than Highschool and default y-axis is % of population that cannot afford healthcare</p> -->
+
+<h2 class="heading">Understanding multiple axes data fields</h2>
+<h4 class="heading"> X - Axis </h4>
+<ul>
+	<li><i>Educaton < Highschool (%): </i> is the default x-axis option. It represents the % of total population having education level less than Highschool</li>
+	<li><i>Education > Bachelors (%): </i>is the second x-axis option which represents the % of total population having education level more than Bachelors</li> 
+	<li><i>No Health Coverage (%): </i> is the third x-axis option which represents the % of total population NOT having any health coverage</li>
+</ul>
+
+<h4 class="heading">Y - Axis</h4>
+<ul>
+	<li><i>Can't afford Healthcare (%): </i> is the default y-axis option. It represents the % of total population that cannot afford healthcare</li>
+	<li><i>Unemployment (%): </i>is the second y-axis option which represents the % of total population that is 16 years and older and is unemployed</li>
+	<li><i>Depression(%): </i> is the third y-axis option which represents the % of total population that is suffering from Depression</li>
+</ul>
+<h3 class="heading">Observations</h3>
+
+<ul>
+	<li>
+		High correlation can be observed between % of population having education level less than highschool and % of population that cannot afford healthcare. Few of the states that suffered the most in 2014 from low education and no healthcoverage are Louisiana, Mississippi and Nevada to name few.
+	</li>
+	<li>
+		There is no evident correlation between people having more than graduate degrees and unemployment level. The good point being there is no contrasting behavior in the data. The state with highest number of  bachelors and more is Washington D.C, but apparently Washington does not have the lowest level of unemployment. State with lowest unemployment rate is North Dakota.
+	</li>
+	<li>
+		There seems to be some correlation between % of population having no health coverage and Depression level. Texas seems to have the highest level of Depression rate and no health coverage population, followed by Georgia, Mississippi and FLorida to name few.
+	</li>
+	
+</ul>
+<h4 class="heading">Conclusion</h4>
+<p>There are many different combinations of observations possible with the amount of data provided. The main purpose is, to use this data and take some insightful action to improve the economic conditions of states prioritising it by most alarming economic factor.</p>
+
+<h3 class = "heading"> Technologies used</h3>
+<p>
+The motive of this project was to get hands on experience with Java Script and its D3 library. 
+
+</p>
+
+</body>
+</html>
