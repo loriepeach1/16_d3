@@ -65,12 +65,10 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 			// and assign them to xMin and xMax variables, which will define the axis domain
 			function findMinAndMax_X(dataColumnX) {
 				xMin = d3.min(mydata, function(data) {
-					//console.log("WRONG:  last returned value X Min: " + xMin)
 					return +data[dataColumnX] * 0.75;
 				});
 
 				xMax = d3.max(mydata, function(data) {
-					//console.log("WRONG:  last returned value X Max: " + xMax)
 					return +data[dataColumnX] * 1.1;
 				});
 
@@ -78,12 +76,10 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 				
 			function findMinAndMax_Y(dataColumnY) {
 				yMin = d3.min(mydata, function(data) {
-					//console.log("'wrong Y Min: " + yMin)
 					return +data[dataColumnY] * 0.75;
 				});
 	
 				yMax = d3.max(mydata, function(data) {
-					//console.log("WRONG Y Max: " + yMax)
 					return +data[dataColumnY] * 1.1;
 				});
 			}
@@ -94,7 +90,7 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 			var currentAxisLabelX = "poverty";
 			var currentAxisLabelY = "healthcareLow";
 
-			// Call findMinAndMax() with 'poverty' aka currentAxisLabel as default
+			// Call findMinAndMax() with 'poverty' as default
 			findMinAndMax_X(currentAxisLabelX);
 			findMinAndMax_Y(currentAxisLabelY);
 
@@ -173,8 +169,8 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 						// .attr("r", function(data, index){
 						//   return data.healthcareLow;
 						// })
-					 	.attr("fill", "orange")
-					 	.attr("opacity", 0.45)
+					 .attr("fill", "orange")
+					 .attr("opacity", 0.45)
 						.on("mouseover", function(data) {
 							toolTip.show(data);
 						})
@@ -303,11 +299,6 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 					currentAxisLabelX = clickedAxis;
 					// Call findMinAndMax() to define the min and max domain values.
 					findMinAndMax_X(currentAxisLabelX);
-
-					//determine what values are passed to yLinearScale
-					console.log("xMin returned: " +  xMin)
-					console.log("xMax returned: " +  xMax)
-
 					// Set the domain for the x-axis
 					xLinearScale.domain([xMin, xMax]);
 					// Create a transition effect for the x-axis
@@ -361,7 +352,7 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 					// An alternative to .attr("class", <className>) method. Used to toggle classes.
 					.classed("yactive", false)
 					.classed("yinactive", true);
-					console.log('y-axis stuff')
+					// console.log('y-axis stuff')
 				clickedAxis.classed("yinactive", false).classed("yactive", true);
 			}
 
@@ -384,24 +375,14 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 					// Call findMinAndMax() to define the min and max domain values.
 					findMinAndMax_Y(currentAxisLabelY);
 					// Set the domain for the x-axis
-					
-					//determine what values are passed to yLinearScale
-					console.log("yMin returned: " +  yMin)
-					console.log("yMax returned: " +  yMax)
-					
 					yLinearScale.domain([yMin, yMax]);
-					console.log("Post yLinearScle yMin returned: " +  yMin)
-					console.log("Post yLinearScle yMax returned: " +  yMax)
-
-
 					// Create a transition effect for the y-axis
 					svg
 						.select(".y-axis")
 						.transition()
 						.ease(d3.easeElastic)
 						.duration(1800)
-						.call(leftAxis);
-						//.call(bottomAxis);  LG Change #1, no impact seen
+						.call(bottomAxis);
 					}
 
 					// Select all circles to create a transition effect, then relocate its horizontal location

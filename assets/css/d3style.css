@@ -7,7 +7,7 @@
   padding-top: 8px;
   font: 12px sans-serif;
   font-weight: bold;
-  color: #12536d;
+  color: #CD853F; /*peru*/
   opacity: 0.3;
   text-align: center;
   background: #d3edf8;    
@@ -18,7 +18,7 @@
 
 .labels {
   text-anchor: middle;
-  color: #12536d;
+  color: #8B4513; /*saddlebrown*/
   text-align: center;
   font-size: 11px;
   font-family: sans-serif;
@@ -29,7 +29,7 @@
   font-family: sans-serif;
   font-weight: bold;
   font: 20px;
-  fill: #1e85ae;
+  fill:#A0522D; /*sienna*/
   text-anchor: start;
   text-align: center;
 
@@ -38,7 +38,7 @@
 .xactive, .yactive {
   font-weight: bold;
   fill: #000;
-  fill: #FF4500;
+  fill: #800000; /*maroon*/
   transition: fill 0.3s ease-in;
   text-anchor: start;
   text-align: center;
@@ -46,13 +46,13 @@
 
 .xinactive, .yinactive {
   font-weight: lighter;
-  fill: skyblue;
+  fill: #A0522D; /*sienna*/
   transition: fill 0.3s ease-in;
   text-anchor: start;
   text-align: center;
 }
 
 .xinactive:hover, .yinactive:hover {
-  fill: #12536d;
+  fill: #CD853F; /*peru*/
   cursor: pointer;
 }

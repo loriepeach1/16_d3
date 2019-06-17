@@ -173,8 +173,8 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 						// .attr("r", function(data, index){
 						//   return data.healthcareLow;
 						// })
-					 	.attr("fill", "orange")
-					 	.attr("opacity", 0.45)
+					 .attr("fill", "orange")
+					 .attr("opacity", 0.45)
 						.on("mouseover", function(data) {
 							toolTip.show(data);
 						})
@@ -361,7 +361,7 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 					// An alternative to .attr("class", <className>) method. Used to toggle classes.
 					.classed("yactive", false)
 					.classed("yinactive", true);
-					console.log('y-axis stuff')
+					// console.log('y-axis stuff')
 				clickedAxis.classed("yinactive", false).classed("yactive", true);
 			}
 
@@ -390,10 +390,6 @@ d3.csv("assets/data/mydata.csv", function(err, mydata) {
 					console.log("yMax returned: " +  yMax)
 					
 					yLinearScale.domain([yMin, yMax]);
-					console.log("Post yLinearScle yMin returned: " +  yMin)
-					console.log("Post yLinearScle yMax returned: " +  yMax)
-
-
 					// Create a transition effect for the y-axis
 					svg
 						.select(".y-axis")
