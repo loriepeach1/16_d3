@@ -1,6 +1,8 @@
 
 # Data Journalism with D3
-Created a scatter plot using US Census data, Javascript, and D3.   The x and y axis variables can be selected by a user.   Upon selection of the axis, the labels change to match the min and max values for the selection.    A mouseover will produce a tool tip with more details on the values.    
+Created a scatter plot using US Census data, Javascript, and D3.   The x and y axis variables can be selected by a user.   Upon selection of the axis, the labels change to match the min and max values for the selection.    A mouseover will produce a tool tip with more details on the values.   
+
+Note: You'll need to use python -m http.server to run the visualization. This will host the page at localhost:8000 in your web browser. 
 
 
 ### Technologies used
@@ -14,8 +16,8 @@ This analysis used the following:
 * Style Sheets
 * HTML 5
 
-<a href="https://anupamlalwani.github.io/DataJournalism_with_D3/" 
-target="_blank">![chart](Datajournalism.png)</a>
+<a href="https://github.com/loriepeach1/16_d3/blob/master/Project/documents/defaultView.png" 
+target="_blank">![chart](defaultview.png)</a>
 
 
 
