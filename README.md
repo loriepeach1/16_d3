@@ -19,8 +19,9 @@ This analysis used the following:
 <a href="https://github.com/loriepeach1/16_d3/blob/master/Project/documents/defaultView.png" 
 target="_blank">![chart](defaultview.png)</a>
 
+![Default View](project/documents/defaultView.png)
 
 
-
+![Default View](/project/documents/defaultView.png)
 
 
